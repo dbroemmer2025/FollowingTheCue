@@ -40,7 +40,6 @@ target. See the manuscript for the estimands, controls, and limitations.
 
 | Location | Purpose |
 | --- | --- |
-| `main_journal_v3.tex` | Current manuscript source |
 | `code/e47_experiment.py` | Freeze, preview, generate, capture, analyze, and report an E47 run |
 | `code/e47_neutral_insertion.py` | Answer-free neutral control and uncued replay |
 | `code/e47_direct_effect.py` | Fixed-rationale prompt replay and RC measurement |
@@ -52,7 +51,7 @@ target. See the manuscript for the estimands, controls, and limitations.
 | `docs/RUNBOOK_de_readers.md` | Reader protocol, amendments, and analysis commands |
 | `docs/RUNBOOK_E47_NEUTRAL_INSERTION.md` | Neutral control and matched-session replay |
 
-The manuscript and `docs/PROMPTS.md` are the starting points for understanding
+The `docs/PROMPTS.md` file is the starting point for understanding
 the study; the runbooks specify the operational steps.
 
 ## Environment
@@ -106,19 +105,13 @@ python code/e47_experiment.py --help
 ## Data and provenance
 
 Large model outputs, residual captures, and derived reader results are not
-assumed to be part of this source repository. The local `.gitignore` excludes
-`e47/`, pickles, generated figure PDFs, and several report directories by
-default. Reproducing a published numerical result requires the corresponding
-frozen `design.json`,
-trace/capture artifacts, reviewed labels, and analysis outputs; code alone is
-not enough. Compiling the manuscript also requires its generated figure assets.
+assumed to be part of this source repository. This repository excludes
+pickle files, generated figure PDFs, and several report directories.
 Any public data release should preserve the run's design ID,
 checkpoint revision, exclusion rules, and provenance files. Do not upload API
 keys or private review worksheets.
 
 ## Citation and license
 
-Please cite the accompanying paper when using this work. This checkout does
-not yet include a `LICENSE` file; reuse permissions are not granted by the
-README itself. Add an explicit license before publishing the repository if
-reuse is intended.
+Please cite the accompanying paper when using this work.
+The code uses an MIT licensed as noted in the `LICENSE` file.
