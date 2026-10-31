@@ -520,6 +520,20 @@ same-session result. The original cue responses still come from the frozen
 earlier run, so this test resolves the neutral-versus-uncued session question,
 **not** every cross-session issue in the cue-versus-neutral contrast.
 
+To display one completed sidecar alongside its replay audit:
+
+```bash
+./code/show_neutral_insertion.sh qwen2_5_7b_movie_recommendations_thinking_v10 \
+  --sidecar-name neutral_insertion_same_session
+```
+
+Omit the run name to display all completed sidecars with that name. The viewer
+defaults to the archived `neutral_insertion` sidecar, so always pass
+`--sidecar-name` when inspecting the new matched-session results. It reports
+same-session/runtime/code checks, token-level uncued reproducibility, paired
+neutral-versus-replay answer changes, and the cue-valid subset. Use
+`--replay-name` if a sidecar uses a replay directory other than `full_uncued`.
+
 For a cheaper diagnostic using only archived neutral responses, run the same
 `replay` command with `--out "$run/neutral_insertion"`, then audit with
 `--sidecar-name neutral_insertion`. Expect `provenance.same_runtime: null`
