@@ -1,0 +1,263 @@
+{
+ "cell": "olmo_2_1124_7b_instruct_temporal_sequences",
+ "model": "gpt-5.6-luna",
+ "text_source": "frozen capture prefix",
+ "layer": 31,
+ "transformer_in_candidate_grid": true,
+ "output_access_transformer_in_candidate_grid": true,
+ "targets": {
+  "dP": {
+   "n_rows": 472,
+   "n_items": 237,
+   "binary": false,
+   "baseline_loss": 0.1111852402890112,
+   "families": {
+    "state": {
+     "loss": 0.07104935257794273,
+     "gain_over_baseline": 0.040135887711068456,
+     "gain_ci95": [
+      0.0297909254832529,
+      0.050501370217965955
+     ],
+     "chosen": [
+      "state-1_C1.0",
+      "state-1_C1.0",
+      "state-1_C1.0",
+      "state-1_C1.0",
+      "state-1_C1.0"
+     ],
+     "r2": 0.3609821556057313
+    },
+    "output": {
+     "loss": 0.0835374854541395,
+     "gain_over_baseline": 0.0276477548348717,
+     "gain_ci95": [
+      0.01951553020952899,
+      0.035513904274714715
+     ],
+     "chosen": [
+      "feat_C0.1",
+      "feat_C0.1",
+      "feat_C1.0",
+      "feat_C0.1",
+      "feat_C1.0"
+     ],
+     "r2": 0.24866389426334867
+    },
+    "text_out": {
+     "loss": 0.08287434056225615,
+     "gain_over_baseline": 0.02831089972675502,
+     "gain_ci95": [
+      0.01936575498242719,
+      0.03745494839206874
+     ],
+     "chosen": [
+      "feat_C1.0",
+      "feat_C0.1",
+      "transformer_output_state0",
+      "feat_C10.0",
+      "feat_C0.1"
+     ],
+     "r2": 0.25462821911581646
+    },
+    "joint_out": {
+     "loss": 0.07201871021512744,
+     "gain_over_baseline": 0.03916653007388375,
+     "gain_ci95": [
+      0.02854949335084251,
+      0.05009632702223862
+     ],
+     "chosen": [
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state-1_C0.1_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0"
+     ],
+     "r2": 0.35226375346291994
+    }
+   },
+   "state_beyond_text_and_output": {
+    "delta": 0.010855630347128725,
+    "ci95": [
+     0.003830574671695258,
+     0.01805046035094866
+    ],
+    "share_of_joint_gain": 0.2771659967490268,
+    "verdict": "state adds beyond text+output",
+    "scope": "post hoc output-access control (Amendment 1)"
+   }
+  },
+  "RC": {
+   "n_rows": 472,
+   "n_items": 237,
+   "binary": false,
+   "baseline_loss": 22.12729835511729,
+   "families": {
+    "state": {
+     "loss": 10.825354516375393,
+     "gain_over_baseline": 11.301943838741904,
+     "gain_ci95": [
+      8.703407198085879,
+      13.745069442664631
+     ],
+     "chosen": [
+      "state-1_C1.0",
+      "state-1_C1.0",
+      "state-1_C1.0",
+      "state-1_C1.0",
+      "state-1_C1.0"
+     ],
+     "r2": 0.5107692614506707
+    },
+    "output": {
+     "loss": 19.750247029754693,
+     "gain_over_baseline": 2.377051325362603,
+     "gain_ci95": [
+      1.2619623929400288,
+      3.4486329758883807
+     ],
+     "chosen": [
+      "feat_C0.1",
+      "feat_C0.1",
+      "feat_C0.1",
+      "feat_C0.1",
+      "feat_C0.1"
+     ],
+     "r2": 0.10742618855739638
+    },
+    "text_out": {
+     "loss": 17.492096757297283,
+     "gain_over_baseline": 4.635201597820011,
+     "gain_ci95": [
+      2.610674141444484,
+      6.495233141197323
+     ],
+     "chosen": [
+      "ngram+feat_C0.1",
+      "transformer_output_state0",
+      "transformer_output_state0",
+      "transformer_output_state0",
+      "ngram+feat_C0.1"
+     ],
+     "r2": 0.20947887642813123
+    },
+    "joint_out": {
+     "loss": 10.398629349489203,
+     "gain_over_baseline": 11.728669005628092,
+     "gain_ci95": [
+      9.092066389686096,
+      14.331765640871557
+     ],
+     "chosen": [
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0"
+     ],
+     "r2": 0.5300542713076242
+    }
+   },
+   "state_beyond_text_and_output": {
+    "delta": 7.09346740780808,
+    "ci95": [
+     5.160994448531311,
+     9.185414522782569
+    ],
+    "share_of_joint_gain": 0.6047973051677243,
+    "verdict": "state adds beyond text+output",
+    "scope": "post hoc output-access control (Amendment 1)"
+   }
+  },
+  "decisive": {
+   "n_rows": 351,
+   "n_items": 205,
+   "binary": true,
+   "baseline_loss": 0.9258581728423997,
+   "families": {
+    "state": {
+     "loss": 0.6325753843312326,
+     "gain_over_baseline": 0.29328278851116707,
+     "gain_ci95": [
+      0.20164113301115744,
+      0.3830097431288741
+     ],
+     "chosen": [
+      "state-1_C1.0",
+      "state32_C1.0",
+      "state-1_C1.0",
+      "state-1_C1.0",
+      "state32_C1.0"
+     ],
+     "auc": 0.8513264554163597
+    },
+    "output": {
+     "loss": 0.6198085997169094,
+     "gain_over_baseline": 0.3060495731254904,
+     "gain_ci95": [
+      0.2064299469672004,
+      0.4043247107091918
+     ],
+     "chosen": [
+      "feat_C0.1",
+      "feat_C0.1",
+      "feat_C10.0",
+      "feat_C1.0",
+      "feat_C0.1"
+     ],
+     "auc": 0.8228076639646279
+    },
+    "text_out": {
+     "loss": 0.6471906820949003,
+     "gain_over_baseline": 0.2786674907474996,
+     "gain_ci95": [
+      0.17891122636697732,
+      0.3751783358695906
+     ],
+     "chosen": [
+      "ngram+feat_C0.1",
+      "ngram+feat_C0.1",
+      "ngram+feat_C0.1",
+      "ngram+feat_C0.1",
+      "ngram+feat_C10.0"
+     ],
+     "auc": 0.8248710390567429
+    },
+    "joint_out": {
+     "loss": 0.5673286182649977,
+     "gain_over_baseline": 0.358529554577402,
+     "gain_ci95": [
+      0.2725580514458713,
+      0.4433913296342482
+     ],
+     "chosen": [
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state8_C1.0_x1.0",
+      "ngram+feat+state32_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0"
+     ],
+     "auc": 0.8919307295504789
+    }
+   },
+   "state_beyond_text_and_output": {
+    "delta": 0.07986206382990248,
+    "ci95": [
+     0.02516152881292858,
+     0.13689576781393648
+    ],
+    "share_of_joint_gain": 0.2227488998055843,
+    "verdict": "state adds beyond text+output",
+    "scope": "post hoc output-access control (Amendment 1)"
+   }
+  }
+ },
+ "output_access_control": {
+  "amendment": "Amendment 1",
+  "reader_code_sha256": "91eb4a811ac9093f07779de526e863595990194efeaa68f7c388d80da50f9038",
+  "factual_score_file": "/content/drive/MyDrive/verbalization_ceiling/reports/direct_effect/olmo_2_1124_7b_instruct_temporal_sequences.jsonl",
+  "factual_score_sha256": "e203dcb18e604fd95ac34965c5787bb8e7b09f07dac9dfd7f0ace3a3d9b52747"
+ },
+ "oof_file": "/content/drive/MyDrive/verbalization_ceiling/reports/de_readers/results/olmo_2_1124_7b_instruct_temporal_sequences__output.oof.csv"
+}

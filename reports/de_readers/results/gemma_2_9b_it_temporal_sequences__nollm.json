@@ -1,0 +1,72 @@
+{
+ "cell": "gemma_2_9b_it_temporal_sequences",
+ "model": "gpt-5.6-luna",
+ "text_source": "frozen capture prefix",
+ "layer": 41,
+ "transformer_in_candidate_grid": true,
+ "output_access_transformer_in_candidate_grid": false,
+ "targets": {
+  "RC": {
+   "n_rows": 463,
+   "n_items": 234,
+   "binary": false,
+   "baseline_loss": 5.121836082721207,
+   "families": {
+    "text_out_nollm": {
+     "loss": 2.210960202828241,
+     "gain_over_baseline": 2.9108758798929655,
+     "gain_ci95": [
+      2.405232316238055,
+      3.4549365359002415
+     ],
+     "chosen": [
+      "feat_C10.0",
+      "feat_C1.0",
+      "feat_C10.0",
+      "feat_C10.0",
+      "feat_C1.0"
+     ],
+     "r2": 0.5683266377291856
+    },
+    "joint_out_nollm": {
+     "loss": 1.9734698822120096,
+     "gain_over_baseline": 3.148366200509197,
+     "gain_ci95": [
+      2.5992860203472268,
+      3.7519629096238294
+     ],
+     "chosen": [
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0"
+     ],
+     "r2": 0.6146948378786237
+    }
+   },
+   "state_beyond_text_and_output_nollm": {
+    "delta": 0.23749032061623102,
+    "ci95": [
+     0.06022313664075286,
+     0.42520867537166496
+    ],
+    "share_of_joint_gain": 0.07543287708330143,
+    "verdict": "not shown",
+    "scope": "post hoc no-LLM ablation (Amendment 2)"
+   }
+  }
+ },
+ "nollm_ablation": {
+  "amendment": "Amendment 2",
+  "reader_code_sha256": "d4f57a93dc9e6baaaedc4e1281c82ce97dcf5ace4eec42f2f5d975c463fefb03",
+  "extras": "heuristic + factual output (no LLM features)"
+ },
+ "output_access_control": {
+  "amendment": "Amendment 1",
+  "reader_code_sha256": "d4f57a93dc9e6baaaedc4e1281c82ce97dcf5ace4eec42f2f5d975c463fefb03",
+  "factual_score_file": "/content/drive/MyDrive/verbalization_ceiling/reports/direct_effect/gemma_2_9b_it_temporal_sequences.jsonl",
+  "factual_score_sha256": "30f5a4ab026e229656de17c21eae972357fe87e62c18c3ee63cb0c7b371c7042"
+ },
+ "oof_file": "/content/drive/MyDrive/verbalization_ceiling/reports/de_readers/results/gemma_2_9b_it_temporal_sequences__nollm.oof.csv"
+}

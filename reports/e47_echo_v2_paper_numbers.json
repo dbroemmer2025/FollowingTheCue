@@ -1,0 +1,902 @@
+{
+  "schema": "e47_echo_v2_paper_numbers_v1",
+  "post_hoc": true,
+  "rule": "v2: cue-echo responses invalid; v1: frozen scored_answer",
+  "v1": {
+    "pooled": {
+      "switch": {
+        "numerator": 2734,
+        "denominator": 4532,
+        "rate": 0.6032656663724625,
+        "ci95": [
+          0.5869991773710918,
+          0.6197964224013189
+        ],
+        "ci_method": "source-item bootstrap"
+      },
+      "initial_ack": {
+        "numerator": 174,
+        "denominator": 2653,
+        "rate": 0.06558612891066717,
+        "ci95": [
+          0.05758354147420764,
+          0.07378125281853963
+        ],
+        "ci_method": "source-item bootstrap"
+      },
+      "why_ack": {
+        "numerator": 275,
+        "denominator": 2619,
+        "rate": 0.10500190912562046,
+        "ci95": [
+          0.09476096017859459,
+          0.11526638603004251
+        ],
+        "ci_method": "source-item bootstrap"
+      }
+    },
+    "cell_switch": {
+      "qwen2_5_7b_movie_recommendations_thinking_v10": [
+        333,
+        464
+      ],
+      "qwen2_7b_it_movie_recommendations_thinking_v10": [
+        155,
+        480
+      ],
+      "gemma_2_9b_it_movie_recommendations_thinking_v10": [
+        266,
+        453
+      ],
+      "mistral_nemo_instruct_2407_movie_recommendations_thinking_v10": [
+        326,
+        390
+      ],
+      "olmo_2_1124_7b_instruct_movie_recommendations_thinking_v10": [
+        435,
+        480
+      ],
+      "qwen2_5_7b_temporal_sequences_thinking_v10": [
+        296,
+        394
+      ],
+      "qwen2_7b_it_temporal_sequences_thinking_v10": [
+        118,
+        479
+      ],
+      "gemma_2_9b_it_temporal_sequences_thinking_v10": [
+        212,
+        463
+      ],
+      "mistral_nemo_instruct_2407_temporal_sequences_thinking_v10": [
+        240,
+        455
+      ],
+      "olmo_2_1124_7b_instruct_temporal_sequences_thinking_v10": [
+        353,
+        474
+      ]
+    },
+    "cell_switch_range": [
+      0.24634655532359082,
+      0.90625
+    ],
+    "cell_switch_median": 0.6524344408921368,
+    "arm_switch_range": [
+      0.10460251046025104,
+      0.9125
+    ],
+    "cell_initial_ack": {
+      "qwen2_5_7b_movie_recommendations_thinking_v10": [
+        41,
+        333
+      ],
+      "qwen2_7b_it_movie_recommendations_thinking_v10": [
+        5,
+        155
+      ],
+      "gemma_2_9b_it_movie_recommendations_thinking_v10": [
+        87,
+        262
+      ],
+      "mistral_nemo_instruct_2407_movie_recommendations_thinking_v10": [
+        0,
+        326
+      ],
+      "olmo_2_1124_7b_instruct_movie_recommendations_thinking_v10": [
+        0,
+        359
+      ],
+      "qwen2_5_7b_temporal_sequences_thinking_v10": [
+        37,
+        296
+      ],
+      "qwen2_7b_it_temporal_sequences_thinking_v10": [
+        0,
+        118
+      ],
+      "gemma_2_9b_it_temporal_sequences_thinking_v10": [
+        0,
+        212
+      ],
+      "mistral_nemo_instruct_2407_temporal_sequences_thinking_v10": [
+        4,
+        239
+      ],
+      "olmo_2_1124_7b_instruct_temporal_sequences_thinking_v10": [
+        0,
+        353
+      ]
+    },
+    "cell_initial_ack_range": [
+      0.0,
+      0.3320610687022901
+    ],
+    "cell_initial_ack_median": 0.008368200836820083,
+    "both_stages": {
+      "reviewed_both": 2614,
+      "neither": 2321,
+      "initial_ack_repeat": [
+        148,
+        170
+      ],
+      "silent_then_ack": [
+        123,
+        2444
+      ],
+      "gemma_movie_neither": [
+        144,
+        262
+      ]
+    },
+    "determinants": {
+      "authority_initial": [
+        204,
+        2156
+      ],
+      "user_initial": [
+        0,
+        2176
+      ],
+      "authority_why": [
+        371,
+        2142
+      ],
+      "user_why": [
+        46,
+        2154
+      ],
+      "authority_initial_switchers": [
+        174,
+        1411
+      ],
+      "authority_initial_resisters": [
+        30,
+        745
+      ],
+      "user_why_switchers": [
+        8,
+        1144
+      ],
+      "user_why_resisters": [
+        38,
+        1010
+      ],
+      "initial_frame_pairs": {
+        "pairs": 2131,
+        "auth_only": 198,
+        "user_only": 0,
+        "both_zero": 1933,
+        "both_one": 0,
+        "mcnemar_p": 4.9784122222889134e-60
+      },
+      "why_frame_pairs": {
+        "pairs": 2097,
+        "auth_only": 360,
+        "user_only": 44,
+        "both_zero": 1691,
+        "both_one": 2,
+        "mcnemar_p": 8.745647974809255e-63
+      },
+      "label_audit_worst_case": {
+        "auth_only": 193,
+        "user_only": 47,
+        "p": 3.4205601686757154e-22
+      }
+    },
+    "agreement": {
+      "pairs": 2235,
+      "agree_ack": 141,
+      "disagree_ack": 207,
+      "agree_ci95": [
+        0.05409000236305987,
+        0.07242530521294291
+      ],
+      "disagree_ci95": [
+        0.08213611941076612,
+        0.10290168284657776
+      ],
+      "both": 83,
+      "neither": 1970,
+      "disagree_only": 124,
+      "agree_only": 58,
+      "mcnemar_p": 1.1185548577208837e-06
+    },
+    "agreement_echoes_excluded": {
+      "pairs": 2195,
+      "agree_ack": 128,
+      "disagree_ack": 169,
+      "agree_ci95": [
+        0.04968375811834691,
+        0.06700321248279027
+      ],
+      "disagree_ci95": [
+        0.06806737241727528,
+        0.08611535823673733
+      ],
+      "both": 72,
+      "neither": 1970,
+      "disagree_only": 97,
+      "agree_only": 56,
+      "mcnemar_p": 0.0011504552032125693
+    },
+    "parsed": {
+      "initial_parsed": 11391,
+      "disagree_parsed": 4533
+    },
+    "base_vs_instruct": {
+      "qwen2_5_7b_movie_recommendations_thinking_v10": 0.7176724137931034,
+      "qwen2_7b_it_movie_recommendations_thinking_v10": 0.3229166666666667,
+      "qwen2_5_7b_temporal_sequences_thinking_v10": 0.751269035532995,
+      "qwen2_7b_it_temporal_sequences_thinking_v10": 0.24634655532359082
+    },
+    "cells_detail": {
+      "qwen2_5_7b_movie_recommendations_thinking_v10": {
+        "authority": {
+          "switchers": 194,
+          "eligible": 234,
+          "initial_positive": 41,
+          "initial_reviewed": 194,
+          "why_positive": 38,
+          "why_reviewed": 194
+        },
+        "sycophancy": {
+          "switchers": 139,
+          "eligible": 230,
+          "initial_positive": 0,
+          "initial_reviewed": 139,
+          "why_positive": 0,
+          "why_reviewed": 139
+        }
+      },
+      "qwen2_7b_it_movie_recommendations_thinking_v10": {
+        "authority": {
+          "switchers": 107,
+          "eligible": 240,
+          "initial_positive": 5,
+          "initial_reviewed": 107,
+          "why_positive": 4,
+          "why_reviewed": 107
+        },
+        "sycophancy": {
+          "switchers": 48,
+          "eligible": 240,
+          "initial_positive": 0,
+          "initial_reviewed": 48,
+          "why_positive": 6,
+          "why_reviewed": 48
+        }
+      },
+      "gemma_2_9b_it_movie_recommendations_thinking_v10": {
+        "authority": {
+          "switchers": 142,
+          "eligible": 230,
+          "initial_positive": 87,
+          "initial_reviewed": 138,
+          "why_positive": 107,
+          "why_reviewed": 142
+        },
+        "sycophancy": {
+          "switchers": 124,
+          "eligible": 223,
+          "initial_positive": 0,
+          "initial_reviewed": 124,
+          "why_positive": 0,
+          "why_reviewed": 124
+        }
+      },
+      "mistral_nemo_instruct_2407_movie_recommendations_thinking_v10": {
+        "authority": {
+          "switchers": 157,
+          "eligible": 192,
+          "initial_positive": 0,
+          "initial_reviewed": 157,
+          "why_positive": 33,
+          "why_reviewed": 157
+        },
+        "sycophancy": {
+          "switchers": 169,
+          "eligible": 198,
+          "initial_positive": 0,
+          "initial_reviewed": 169,
+          "why_positive": 0,
+          "why_reviewed": 169
+        }
+      },
+      "olmo_2_1124_7b_instruct_movie_recommendations_thinking_v10": {
+        "authority": {
+          "switchers": 219,
+          "eligible": 240,
+          "initial_positive": 0,
+          "initial_reviewed": 181,
+          "why_positive": 0,
+          "why_reviewed": 165
+        },
+        "sycophancy": {
+          "switchers": 216,
+          "eligible": 240,
+          "initial_positive": 0,
+          "initial_reviewed": 178,
+          "why_positive": 0,
+          "why_reviewed": 159
+        }
+      },
+      "qwen2_5_7b_temporal_sequences_thinking_v10": {
+        "authority": {
+          "switchers": 158,
+          "eligible": 190,
+          "initial_positive": 37,
+          "initial_reviewed": 158,
+          "why_positive": 31,
+          "why_reviewed": 154
+        },
+        "sycophancy": {
+          "switchers": 138,
+          "eligible": 204,
+          "initial_positive": 0,
+          "initial_reviewed": 138,
+          "why_positive": 0,
+          "why_reviewed": 138
+        }
+      },
+      "qwen2_7b_it_temporal_sequences_thinking_v10": {
+        "authority": {
+          "switchers": 93,
+          "eligible": 240,
+          "initial_positive": 0,
+          "initial_reviewed": 93,
+          "why_positive": 0,
+          "why_reviewed": 93
+        },
+        "sycophancy": {
+          "switchers": 25,
+          "eligible": 239,
+          "initial_positive": 0,
+          "initial_reviewed": 25,
+          "why_positive": 2,
+          "why_reviewed": 25
+        }
+      },
+      "gemma_2_9b_it_temporal_sequences_thinking_v10": {
+        "authority": {
+          "switchers": 125,
+          "eligible": 232,
+          "initial_positive": 0,
+          "initial_reviewed": 125,
+          "why_positive": 45,
+          "why_reviewed": 125
+        },
+        "sycophancy": {
+          "switchers": 87,
+          "eligible": 231,
+          "initial_positive": 0,
+          "initial_reviewed": 87,
+          "why_positive": 0,
+          "why_reviewed": 87
+        }
+      },
+      "mistral_nemo_instruct_2407_temporal_sequences_thinking_v10": {
+        "authority": {
+          "switchers": 109,
+          "eligible": 224,
+          "initial_positive": 4,
+          "initial_reviewed": 108,
+          "why_positive": 8,
+          "why_reviewed": 109
+        },
+        "sycophancy": {
+          "switchers": 131,
+          "eligible": 231,
+          "initial_positive": 0,
+          "initial_reviewed": 131,
+          "why_positive": 0,
+          "why_reviewed": 131
+        }
+      },
+      "olmo_2_1124_7b_instruct_temporal_sequences_thinking_v10": {
+        "authority": {
+          "switchers": 189,
+          "eligible": 237,
+          "initial_positive": 0,
+          "initial_reviewed": 189,
+          "why_positive": 1,
+          "why_reviewed": 189
+        },
+        "sycophancy": {
+          "switchers": 164,
+          "eligible": 237,
+          "initial_positive": 0,
+          "initial_reviewed": 164,
+          "why_positive": 0,
+          "why_reviewed": 164
+        }
+      }
+    }
+  },
+  "v2": {
+    "pooled": {
+      "switch": {
+        "numerator": 2696,
+        "denominator": 4494,
+        "rate": 0.599910992434357,
+        "ci95": [
+          0.5833696542989123,
+          0.6167410714285714
+        ],
+        "ci_method": "source-item bootstrap"
+      },
+      "initial_ack": {
+        "numerator": 136,
+        "denominator": 2615,
+        "rate": 0.0520076481835564,
+        "ci95": [
+          0.04479283330666728,
+          0.059233449477351915
+        ],
+        "ci_method": "source-item bootstrap"
+      },
+      "why_ack": {
+        "numerator": 241,
+        "denominator": 2581,
+        "rate": 0.09337466098411469,
+        "ci95": [
+          0.08356315695978055,
+          0.10309318922252379
+        ],
+        "ci_method": "source-item bootstrap"
+      }
+    },
+    "cell_switch": {
+      "qwen2_5_7b_movie_recommendations_thinking_v10": [
+        295,
+        426
+      ],
+      "qwen2_7b_it_movie_recommendations_thinking_v10": [
+        155,
+        480
+      ],
+      "gemma_2_9b_it_movie_recommendations_thinking_v10": [
+        266,
+        453
+      ],
+      "mistral_nemo_instruct_2407_movie_recommendations_thinking_v10": [
+        326,
+        390
+      ],
+      "olmo_2_1124_7b_instruct_movie_recommendations_thinking_v10": [
+        435,
+        480
+      ],
+      "qwen2_5_7b_temporal_sequences_thinking_v10": [
+        296,
+        394
+      ],
+      "qwen2_7b_it_temporal_sequences_thinking_v10": [
+        118,
+        479
+      ],
+      "gemma_2_9b_it_temporal_sequences_thinking_v10": [
+        212,
+        463
+      ],
+      "mistral_nemo_instruct_2407_temporal_sequences_thinking_v10": [
+        240,
+        455
+      ],
+      "olmo_2_1124_7b_instruct_temporal_sequences_thinking_v10": [
+        353,
+        474
+      ]
+    },
+    "cell_switch_range": [
+      0.24634655532359082,
+      0.90625
+    ],
+    "cell_switch_median": 0.639842365450984,
+    "arm_switch_range": [
+      0.10460251046025104,
+      0.9125
+    ],
+    "cell_initial_ack": {
+      "qwen2_5_7b_movie_recommendations_thinking_v10": [
+        3,
+        295
+      ],
+      "qwen2_7b_it_movie_recommendations_thinking_v10": [
+        5,
+        155
+      ],
+      "gemma_2_9b_it_movie_recommendations_thinking_v10": [
+        87,
+        262
+      ],
+      "mistral_nemo_instruct_2407_movie_recommendations_thinking_v10": [
+        0,
+        326
+      ],
+      "olmo_2_1124_7b_instruct_movie_recommendations_thinking_v10": [
+        0,
+        359
+      ],
+      "qwen2_5_7b_temporal_sequences_thinking_v10": [
+        37,
+        296
+      ],
+      "qwen2_7b_it_temporal_sequences_thinking_v10": [
+        0,
+        118
+      ],
+      "gemma_2_9b_it_temporal_sequences_thinking_v10": [
+        0,
+        212
+      ],
+      "mistral_nemo_instruct_2407_temporal_sequences_thinking_v10": [
+        4,
+        239
+      ],
+      "olmo_2_1124_7b_instruct_temporal_sequences_thinking_v10": [
+        0,
+        353
+      ]
+    },
+    "cell_initial_ack_range": [
+      0.0,
+      0.3320610687022901
+    ],
+    "cell_initial_ack_median": 0.005084745762711864,
+    "both_stages": {
+      "reviewed_both": 2576,
+      "neither": 2321,
+      "initial_ack_repeat": [
+        114,
+        132
+      ],
+      "silent_then_ack": [
+        123,
+        2444
+      ],
+      "gemma_movie_neither": [
+        144,
+        262
+      ]
+    },
+    "determinants": {
+      "authority_initial": [
+        204,
+        2156
+      ],
+      "user_initial": [
+        0,
+        2176
+      ],
+      "authority_why": [
+        371,
+        2142
+      ],
+      "user_why": [
+        46,
+        2154
+      ],
+      "authority_initial_switchers": [
+        136,
+        1373
+      ],
+      "authority_initial_resisters": [
+        30,
+        745
+      ],
+      "user_why_switchers": [
+        8,
+        1144
+      ],
+      "user_why_resisters": [
+        38,
+        1010
+      ],
+      "initial_frame_pairs": {
+        "pairs": 2131,
+        "auth_only": 198,
+        "user_only": 0,
+        "both_zero": 1933,
+        "both_one": 0,
+        "mcnemar_p": 4.9784122222889134e-60
+      },
+      "why_frame_pairs": {
+        "pairs": 2097,
+        "auth_only": 360,
+        "user_only": 44,
+        "both_zero": 1691,
+        "both_one": 2,
+        "mcnemar_p": 8.745647974809255e-63
+      },
+      "label_audit_worst_case": {
+        "auth_only": 193,
+        "user_only": 47,
+        "p": 3.4205601686757154e-22
+      }
+    },
+    "agreement": {
+      "pairs": 2235,
+      "agree_ack": 141,
+      "disagree_ack": 207,
+      "agree_ci95": [
+        0.05409000236305987,
+        0.07242530521294291
+      ],
+      "disagree_ci95": [
+        0.08213611941076612,
+        0.10290168284657776
+      ],
+      "both": 83,
+      "neither": 1970,
+      "disagree_only": 124,
+      "agree_only": 58,
+      "mcnemar_p": 1.1185548577208837e-06
+    },
+    "agreement_echoes_excluded": {
+      "pairs": 2195,
+      "agree_ack": 128,
+      "disagree_ack": 169,
+      "agree_ci95": [
+        0.04968375811834691,
+        0.06700321248279027
+      ],
+      "disagree_ci95": [
+        0.06806737241727528,
+        0.08611535823673733
+      ],
+      "both": 72,
+      "neither": 1970,
+      "disagree_only": 97,
+      "agree_only": 56,
+      "mcnemar_p": 0.0011504552032125693
+    },
+    "parsed": {
+      "initial_parsed": 11340,
+      "disagree_parsed": 4495
+    },
+    "base_vs_instruct": {
+      "qwen2_5_7b_movie_recommendations_thinking_v10": 0.6924882629107981,
+      "qwen2_7b_it_movie_recommendations_thinking_v10": 0.3229166666666667,
+      "qwen2_5_7b_temporal_sequences_thinking_v10": 0.751269035532995,
+      "qwen2_7b_it_temporal_sequences_thinking_v10": 0.24634655532359082
+    },
+    "cells_detail": {
+      "qwen2_5_7b_movie_recommendations_thinking_v10": {
+        "authority": {
+          "switchers": 156,
+          "eligible": 196,
+          "initial_positive": 3,
+          "initial_reviewed": 156,
+          "why_positive": 4,
+          "why_reviewed": 156
+        },
+        "sycophancy": {
+          "switchers": 139,
+          "eligible": 230,
+          "initial_positive": 0,
+          "initial_reviewed": 139,
+          "why_positive": 0,
+          "why_reviewed": 139
+        }
+      },
+      "qwen2_7b_it_movie_recommendations_thinking_v10": {
+        "authority": {
+          "switchers": 107,
+          "eligible": 240,
+          "initial_positive": 5,
+          "initial_reviewed": 107,
+          "why_positive": 4,
+          "why_reviewed": 107
+        },
+        "sycophancy": {
+          "switchers": 48,
+          "eligible": 240,
+          "initial_positive": 0,
+          "initial_reviewed": 48,
+          "why_positive": 6,
+          "why_reviewed": 48
+        }
+      },
+      "gemma_2_9b_it_movie_recommendations_thinking_v10": {
+        "authority": {
+          "switchers": 142,
+          "eligible": 230,
+          "initial_positive": 87,
+          "initial_reviewed": 138,
+          "why_positive": 107,
+          "why_reviewed": 142
+        },
+        "sycophancy": {
+          "switchers": 124,
+          "eligible": 223,
+          "initial_positive": 0,
+          "initial_reviewed": 124,
+          "why_positive": 0,
+          "why_reviewed": 124
+        }
+      },
+      "mistral_nemo_instruct_2407_movie_recommendations_thinking_v10": {
+        "authority": {
+          "switchers": 157,
+          "eligible": 192,
+          "initial_positive": 0,
+          "initial_reviewed": 157,
+          "why_positive": 33,
+          "why_reviewed": 157
+        },
+        "sycophancy": {
+          "switchers": 169,
+          "eligible": 198,
+          "initial_positive": 0,
+          "initial_reviewed": 169,
+          "why_positive": 0,
+          "why_reviewed": 169
+        }
+      },
+      "olmo_2_1124_7b_instruct_movie_recommendations_thinking_v10": {
+        "authority": {
+          "switchers": 219,
+          "eligible": 240,
+          "initial_positive": 0,
+          "initial_reviewed": 181,
+          "why_positive": 0,
+          "why_reviewed": 165
+        },
+        "sycophancy": {
+          "switchers": 216,
+          "eligible": 240,
+          "initial_positive": 0,
+          "initial_reviewed": 178,
+          "why_positive": 0,
+          "why_reviewed": 159
+        }
+      },
+      "qwen2_5_7b_temporal_sequences_thinking_v10": {
+        "authority": {
+          "switchers": 158,
+          "eligible": 190,
+          "initial_positive": 37,
+          "initial_reviewed": 158,
+          "why_positive": 31,
+          "why_reviewed": 154
+        },
+        "sycophancy": {
+          "switchers": 138,
+          "eligible": 204,
+          "initial_positive": 0,
+          "initial_reviewed": 138,
+          "why_positive": 0,
+          "why_reviewed": 138
+        }
+      },
+      "qwen2_7b_it_temporal_sequences_thinking_v10": {
+        "authority": {
+          "switchers": 93,
+          "eligible": 240,
+          "initial_positive": 0,
+          "initial_reviewed": 93,
+          "why_positive": 0,
+          "why_reviewed": 93
+        },
+        "sycophancy": {
+          "switchers": 25,
+          "eligible": 239,
+          "initial_positive": 0,
+          "initial_reviewed": 25,
+          "why_positive": 2,
+          "why_reviewed": 25
+        }
+      },
+      "gemma_2_9b_it_temporal_sequences_thinking_v10": {
+        "authority": {
+          "switchers": 125,
+          "eligible": 232,
+          "initial_positive": 0,
+          "initial_reviewed": 125,
+          "why_positive": 45,
+          "why_reviewed": 125
+        },
+        "sycophancy": {
+          "switchers": 87,
+          "eligible": 231,
+          "initial_positive": 0,
+          "initial_reviewed": 87,
+          "why_positive": 0,
+          "why_reviewed": 87
+        }
+      },
+      "mistral_nemo_instruct_2407_temporal_sequences_thinking_v10": {
+        "authority": {
+          "switchers": 109,
+          "eligible": 224,
+          "initial_positive": 4,
+          "initial_reviewed": 108,
+          "why_positive": 8,
+          "why_reviewed": 109
+        },
+        "sycophancy": {
+          "switchers": 131,
+          "eligible": 231,
+          "initial_positive": 0,
+          "initial_reviewed": 131,
+          "why_positive": 0,
+          "why_reviewed": 131
+        }
+      },
+      "olmo_2_1124_7b_instruct_temporal_sequences_thinking_v10": {
+        "authority": {
+          "switchers": 189,
+          "eligible": 237,
+          "initial_positive": 0,
+          "initial_reviewed": 189,
+          "why_positive": 1,
+          "why_reviewed": 189
+        },
+        "sycophancy": {
+          "switchers": 164,
+          "eligible": 237,
+          "initial_positive": 0,
+          "initial_reviewed": 164,
+          "why_positive": 0,
+          "why_reviewed": 164
+        }
+      }
+    }
+  },
+  "reviewed_all_disagreement": {
+    "population": "all reviewed disagreement responses; no answer-validity filter",
+    "authority_initial": [
+      212,
+      2249
+    ],
+    "user_initial": [
+      0,
+      2257
+    ],
+    "authority_why": [
+      376,
+      2194
+    ],
+    "user_why": [
+      47,
+      2209
+    ],
+    "initial_frame_pairs": {
+      "pairs": 2249,
+      "auth_only": 212,
+      "user_only": 0,
+      "both_zero": 2037,
+      "both_one": 0,
+      "mcnemar_p": 3.0385816786431356e-64
+    },
+    "why_frame_pairs": {
+      "pairs": 2149,
+      "auth_only": 365,
+      "user_only": 45,
+      "both_zero": 1737,
+      "both_one": 2,
+      "mcnemar_p": 2.2087882802264917e-63
+    }
+  }
+}

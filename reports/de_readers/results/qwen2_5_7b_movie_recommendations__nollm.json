@@ -1,0 +1,72 @@
+{
+ "cell": "qwen2_5_7b_movie_recommendations",
+ "model": "gpt-5.6-luna",
+ "text_source": "frozen capture prefix",
+ "layer": 27,
+ "transformer_in_candidate_grid": true,
+ "output_access_transformer_in_candidate_grid": false,
+ "targets": {
+  "RC": {
+   "n_rows": 425,
+   "n_items": 236,
+   "binary": false,
+   "baseline_loss": 4.606818114130546,
+   "families": {
+    "text_out_nollm": {
+     "loss": 2.590819984668543,
+     "gain_over_baseline": 2.0159981294620044,
+     "gain_ci95": [
+      1.5036144109715264,
+      2.5427175854786497
+     ],
+     "chosen": [
+      "transformer_output_state0",
+      "ngram+feat_C10.0",
+      "transformer_output_state0",
+      "transformer_output_state0",
+      "transformer_output_state0"
+     ],
+     "r2": 0.43761183522273417
+    },
+    "joint_out_nollm": {
+     "loss": 1.4349640625270077,
+     "gain_over_baseline": 3.1718540516035394,
+     "gain_ci95": [
+      2.5849260879241784,
+      3.8041706754193942
+     ],
+     "chosen": [
+      "ngram+feat+state32_C1.0_x1.0",
+      "ngram+feat+state32_C1.0_x1.0",
+      "ngram+feat+state32_C1.0_x1.0",
+      "ngram+feat+state32_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0"
+     ],
+     "r2": 0.6885129764238953
+    }
+   },
+   "state_beyond_text_and_output_nollm": {
+    "delta": 1.1558559221415354,
+    "ci95": [
+     0.860020545204678,
+     1.4730098430267848
+    ],
+    "share_of_joint_gain": 0.36441018512727263,
+    "verdict": "state adds beyond text+output",
+    "scope": "post hoc no-LLM ablation (Amendment 2)"
+   }
+  }
+ },
+ "nollm_ablation": {
+  "amendment": "Amendment 2",
+  "reader_code_sha256": "d4f57a93dc9e6baaaedc4e1281c82ce97dcf5ace4eec42f2f5d975c463fefb03",
+  "extras": "heuristic + factual output (no LLM features)"
+ },
+ "output_access_control": {
+  "amendment": "Amendment 1",
+  "reader_code_sha256": "d4f57a93dc9e6baaaedc4e1281c82ce97dcf5ace4eec42f2f5d975c463fefb03",
+  "factual_score_file": "/content/drive/MyDrive/verbalization_ceiling/reports/direct_effect/qwen2_5_7b_movie_recommendations.jsonl",
+  "factual_score_sha256": "694a2f560279af8e25b23fb7461ef02c41918ea8ca84eeb07e009049a0c01ca1"
+ },
+ "oof_file": "/content/drive/MyDrive/verbalization_ceiling/reports/de_readers/results/qwen2_5_7b_movie_recommendations__nollm.oof.csv"
+}

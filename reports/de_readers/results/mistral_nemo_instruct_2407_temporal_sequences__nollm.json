@@ -1,0 +1,72 @@
+{
+ "cell": "mistral_nemo_instruct_2407_temporal_sequences",
+ "model": "gpt-5.6-luna",
+ "text_source": "frozen capture prefix",
+ "layer": 39,
+ "transformer_in_candidate_grid": true,
+ "output_access_transformer_in_candidate_grid": false,
+ "targets": {
+  "RC": {
+   "n_rows": 455,
+   "n_items": 231,
+   "binary": false,
+   "baseline_loss": 6.117170332951682,
+   "families": {
+    "text_out_nollm": {
+     "loss": 3.9170542836245366,
+     "gain_over_baseline": 2.2001160493271463,
+     "gain_ci95": [
+      1.5544955841829835,
+      2.8890851369338244
+     ],
+     "chosen": [
+      "ngram+feat_C1.0",
+      "ngram+feat_C1.0",
+      "ngram+feat_C1.0",
+      "ngram+feat_C1.0",
+      "ngram+feat_C1.0"
+     ],
+     "r2": 0.3596623813915505
+    },
+    "joint_out_nollm": {
+     "loss": 3.197946758363218,
+     "gain_over_baseline": 2.9192235745884645,
+     "gain_ci95": [
+      2.143489279371469,
+      3.7695733520469386
+     ],
+     "chosen": [
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0"
+     ],
+     "r2": 0.47721796446689235
+    }
+   },
+   "state_beyond_text_and_output_nollm": {
+    "delta": 0.7191075252613184,
+    "ci95": [
+     0.45060075927641513,
+     0.9949787675396775
+    ],
+    "share_of_joint_gain": 0.24633520074346968,
+    "verdict": "state adds beyond text+output",
+    "scope": "post hoc no-LLM ablation (Amendment 2)"
+   }
+  }
+ },
+ "nollm_ablation": {
+  "amendment": "Amendment 2",
+  "reader_code_sha256": "d4f57a93dc9e6baaaedc4e1281c82ce97dcf5ace4eec42f2f5d975c463fefb03",
+  "extras": "heuristic + factual output (no LLM features)"
+ },
+ "output_access_control": {
+  "amendment": "Amendment 1",
+  "reader_code_sha256": "d4f57a93dc9e6baaaedc4e1281c82ce97dcf5ace4eec42f2f5d975c463fefb03",
+  "factual_score_file": "/content/drive/MyDrive/verbalization_ceiling/reports/direct_effect/mistral_nemo_instruct_2407_temporal_sequences.jsonl",
+  "factual_score_sha256": "2a746c43a2081f8d5772c83a54d7a98b5d00d45fee6bb582fd7887f20e62f04f"
+ },
+ "oof_file": "/content/drive/MyDrive/verbalization_ceiling/reports/de_readers/results/mistral_nemo_instruct_2407_temporal_sequences__nollm.oof.csv"
+}

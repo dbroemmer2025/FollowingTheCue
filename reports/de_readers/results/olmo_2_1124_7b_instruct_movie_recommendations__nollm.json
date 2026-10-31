@@ -1,0 +1,72 @@
+{
+ "cell": "olmo_2_1124_7b_instruct_movie_recommendations",
+ "model": "gpt-5.6-luna",
+ "text_source": "frozen capture prefix",
+ "layer": 31,
+ "transformer_in_candidate_grid": true,
+ "output_access_transformer_in_candidate_grid": false,
+ "targets": {
+  "RC": {
+   "n_rows": 439,
+   "n_items": 238,
+   "binary": false,
+   "baseline_loss": 19.190998338996867,
+   "families": {
+    "text_out_nollm": {
+     "loss": 14.32540514525522,
+     "gain_over_baseline": 4.865593193741646,
+     "gain_ci95": [
+      2.9742846688044278,
+      6.868702523572692
+     ],
+     "chosen": [
+      "transformer_output_state0",
+      "transformer_output_state0",
+      "transformer_output_state0",
+      "transformer_output_state0",
+      "transformer_output_state0"
+     ],
+     "r2": 0.2535351787225456
+    },
+    "joint_out_nollm": {
+     "loss": 9.21890588869131,
+     "gain_over_baseline": 9.972092450305553,
+     "gain_ci95": [
+      7.339056755699308,
+      12.831216186692943
+     ],
+     "chosen": [
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0"
+     ],
+     "r2": 0.5196234335574856
+    }
+   },
+   "state_beyond_text_and_output_nollm": {
+    "delta": 5.106499256563908,
+    "ci95": [
+     3.792606662066159,
+     6.569756678106747
+    ],
+    "share_of_joint_gain": 0.5120790127058479,
+    "verdict": "state adds beyond text+output",
+    "scope": "post hoc no-LLM ablation (Amendment 2)"
+   }
+  }
+ },
+ "nollm_ablation": {
+  "amendment": "Amendment 2",
+  "reader_code_sha256": "d4f57a93dc9e6baaaedc4e1281c82ce97dcf5ace4eec42f2f5d975c463fefb03",
+  "extras": "heuristic + factual output (no LLM features)"
+ },
+ "output_access_control": {
+  "amendment": "Amendment 1",
+  "reader_code_sha256": "d4f57a93dc9e6baaaedc4e1281c82ce97dcf5ace4eec42f2f5d975c463fefb03",
+  "factual_score_file": "/content/drive/MyDrive/verbalization_ceiling/reports/direct_effect/olmo_2_1124_7b_instruct_movie_recommendations.jsonl",
+  "factual_score_sha256": "3c8ae482f8a4eeeb786cf18244c6b28ab73c6b7e516cf781c33264b1db505fb4"
+ },
+ "oof_file": "/content/drive/MyDrive/verbalization_ceiling/reports/de_readers/results/olmo_2_1124_7b_instruct_movie_recommendations__nollm.oof.csv"
+}

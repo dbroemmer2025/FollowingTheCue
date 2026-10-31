@@ -1,0 +1,72 @@
+{
+ "cell": "mistral_nemo_instruct_2407_movie_recommendations",
+ "model": "gpt-5.6-luna",
+ "text_source": "frozen capture prefix",
+ "layer": 39,
+ "transformer_in_candidate_grid": true,
+ "output_access_transformer_in_candidate_grid": false,
+ "targets": {
+  "RC": {
+   "n_rows": 390,
+   "n_items": 198,
+   "binary": false,
+   "baseline_loss": 3.3717546289203044,
+   "families": {
+    "text_out_nollm": {
+     "loss": 2.188992915744028,
+     "gain_over_baseline": 1.1827617131762767,
+     "gain_ci95": [
+      0.7487505223818147,
+      1.6631274733779027
+     ],
+     "chosen": [
+      "ngram+feat_C1.0",
+      "ngram+feat_C10.0",
+      "transformer_output_state0",
+      "ngram+feat_C10.0",
+      "transformer_output_state0"
+     ],
+     "r2": 0.3507852270836854
+    },
+    "joint_out_nollm": {
+     "loss": 1.7408659471997794,
+     "gain_over_baseline": 1.6308886817205257,
+     "gain_ci95": [
+      1.1825282834271937,
+      2.1305592906955986
+     ],
+     "chosen": [
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0"
+     ],
+     "r2": 0.48369138956080104
+    }
+   },
+   "state_beyond_text_and_output_nollm": {
+    "delta": 0.4481269685442486,
+    "ci95": [
+     0.29232404820010643,
+     0.6189037133477985
+    ],
+    "share_of_joint_gain": 0.2747747124417418,
+    "verdict": "state adds beyond text+output",
+    "scope": "post hoc no-LLM ablation (Amendment 2)"
+   }
+  }
+ },
+ "nollm_ablation": {
+  "amendment": "Amendment 2",
+  "reader_code_sha256": "d4f57a93dc9e6baaaedc4e1281c82ce97dcf5ace4eec42f2f5d975c463fefb03",
+  "extras": "heuristic + factual output (no LLM features)"
+ },
+ "output_access_control": {
+  "amendment": "Amendment 1",
+  "reader_code_sha256": "d4f57a93dc9e6baaaedc4e1281c82ce97dcf5ace4eec42f2f5d975c463fefb03",
+  "factual_score_file": "/content/drive/MyDrive/verbalization_ceiling/reports/direct_effect/mistral_nemo_instruct_2407_movie_recommendations.jsonl",
+  "factual_score_sha256": "f34253a17b0fc586e7aa90693915d5c5b78e56f459260d502b565cfac9a34282"
+ },
+ "oof_file": "/content/drive/MyDrive/verbalization_ceiling/reports/de_readers/results/mistral_nemo_instruct_2407_movie_recommendations__nollm.oof.csv"
+}

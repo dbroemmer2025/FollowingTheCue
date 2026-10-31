@@ -1,0 +1,389 @@
+{
+  "scope": "fixed ten-cell model grid; resample source items within task; v2 echo rule",
+  "bootstrap_draws": 5000,
+  "seed": 47,
+  "cells": [
+    {
+      "run_name": "qwen2_5_7b_movie_recommendations_thinking_v10",
+      "model": "qwen2.5-7b",
+      "task": "movie_recommendation",
+      "switch": {
+        "numerator": 295,
+        "denominator": 426,
+        "rate": 0.6924882629107981,
+        "ci95": [
+          0.6442307692307693,
+          0.7382075471698113
+        ],
+        "ci_method": "source-item bootstrap"
+      },
+      "initial_ack": {
+        "numerator": 3,
+        "denominator": 295,
+        "rate": 0.010169491525423728,
+        "ci95": [
+          0.0,
+          0.02348993288590604
+        ],
+        "ci_method": "source-item bootstrap"
+      },
+      "why_ack": {
+        "numerator": 4,
+        "denominator": 295,
+        "rate": 0.013559322033898305,
+        "ci95": [
+          0.0032784206578806386,
+          0.027874564459930314
+        ],
+        "ci_method": "source-item bootstrap"
+      }
+    },
+    {
+      "run_name": "qwen2_7b_it_movie_recommendations_thinking_v10",
+      "model": "qwen2.5-7b-instruct",
+      "task": "movie_recommendation",
+      "switch": {
+        "numerator": 155,
+        "denominator": 480,
+        "rate": 0.3229166666666667,
+        "ci95": [
+          0.27708333333333335,
+          0.37083333333333335
+        ],
+        "ci_method": "source-item bootstrap"
+      },
+      "initial_ack": {
+        "numerator": 5,
+        "denominator": 155,
+        "rate": 0.03225806451612903,
+        "ci95": [
+          0.006493506493506494,
+          0.06290303319799365
+        ],
+        "ci_method": "source-item bootstrap"
+      },
+      "why_ack": {
+        "numerator": 10,
+        "denominator": 155,
+        "rate": 0.06451612903225806,
+        "ci95": [
+          0.029394861392833,
+          0.10493827160493827
+        ],
+        "ci_method": "source-item bootstrap"
+      }
+    },
+    {
+      "run_name": "gemma_2_9b_it_movie_recommendations_thinking_v10",
+      "model": "gemma-2-9b-it",
+      "task": "movie_recommendation",
+      "switch": {
+        "numerator": 266,
+        "denominator": 453,
+        "rate": 0.58719646799117,
+        "ci95": [
+          0.527590786696747,
+          0.6439597629444791
+        ],
+        "ci_method": "source-item bootstrap"
+      },
+      "initial_ack": {
+        "numerator": 87,
+        "denominator": 262,
+        "rate": 0.3320610687022901,
+        "ci95": [
+          0.2840364343827379,
+          0.37970289094830095
+        ],
+        "ci_method": "source-item bootstrap"
+      },
+      "why_ack": {
+        "numerator": 107,
+        "denominator": 266,
+        "rate": 0.40225563909774437,
+        "ci95": [
+          0.35447761194029853,
+          0.44881889763779526
+        ],
+        "ci_method": "source-item bootstrap"
+      }
+    },
+    {
+      "run_name": "mistral_nemo_instruct_2407_movie_recommendations_thinking_v10",
+      "model": "mistral-nemo-instruct-2407",
+      "task": "movie_recommendation",
+      "switch": {
+        "numerator": 326,
+        "denominator": 390,
+        "rate": 0.8358974358974359,
+        "ci95": [
+          0.7958656330749354,
+          0.8743589743589744
+        ],
+        "ci_method": "source-item bootstrap"
+      },
+      "initial_ack": {
+        "numerator": 0,
+        "denominator": 326,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.01953333128693524
+        ],
+        "ci_method": "source-item bootstrap; zero-count upper bound over unique source items"
+      },
+      "why_ack": {
+        "numerator": 33,
+        "denominator": 326,
+        "rate": 0.10122699386503067,
+        "ci95": [
+          0.07076923076923076,
+          0.13230882352941176
+        ],
+        "ci_method": "source-item bootstrap"
+      }
+    },
+    {
+      "run_name": "olmo_2_1124_7b_instruct_movie_recommendations_thinking_v10",
+      "model": "olmo-2-1124-7b-instruct",
+      "task": "movie_recommendation",
+      "switch": {
+        "numerator": 435,
+        "denominator": 480,
+        "rate": 0.90625,
+        "ci95": [
+          0.8770833333333333,
+          0.9333333333333333
+        ],
+        "ci_method": "source-item bootstrap"
+      },
+      "initial_ack": {
+        "numerator": 0,
+        "denominator": 359,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.019128194175846325
+        ],
+        "ci_method": "source-item bootstrap; zero-count upper bound over unique source items"
+      },
+      "why_ack": {
+        "numerator": 0,
+        "denominator": 324,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.01953333128693524
+        ],
+        "ci_method": "source-item bootstrap; zero-count upper bound over unique source items"
+      }
+    },
+    {
+      "run_name": "qwen2_5_7b_temporal_sequences_thinking_v10",
+      "model": "qwen2.5-7b",
+      "task": "temporal_sequences",
+      "switch": {
+        "numerator": 296,
+        "denominator": 394,
+        "rate": 0.751269035532995,
+        "ci95": [
+          0.7067635606874328,
+          0.7938931297709924
+        ],
+        "ci_method": "source-item bootstrap"
+      },
+      "initial_ack": {
+        "numerator": 37,
+        "denominator": 296,
+        "rate": 0.125,
+        "ci95": [
+          0.09090909090909091,
+          0.16151202749140894
+        ],
+        "ci_method": "source-item bootstrap"
+      },
+      "why_ack": {
+        "numerator": 31,
+        "denominator": 292,
+        "rate": 0.10616438356164383,
+        "ci95": [
+          0.0727256999056307,
+          0.1398619298789947
+        ],
+        "ci_method": "source-item bootstrap"
+      }
+    },
+    {
+      "run_name": "qwen2_7b_it_temporal_sequences_thinking_v10",
+      "model": "qwen2.5-7b-instruct",
+      "task": "temporal_sequences",
+      "switch": {
+        "numerator": 118,
+        "denominator": 479,
+        "rate": 0.24634655532359082,
+        "ci95": [
+          0.20668058455114824,
+          0.28541666666666665
+        ],
+        "ci_method": "source-item bootstrap"
+      },
+      "initial_ack": {
+        "numerator": 0,
+        "denominator": 118,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.03551932665788404
+        ],
+        "ci_method": "source-item bootstrap; zero-count upper bound over unique source items"
+      },
+      "why_ack": {
+        "numerator": 2,
+        "denominator": 118,
+        "rate": 0.01694915254237288,
+        "ci95": [
+          0.0,
+          0.04310344827586207
+        ],
+        "ci_method": "source-item bootstrap"
+      }
+    },
+    {
+      "run_name": "gemma_2_9b_it_temporal_sequences_thinking_v10",
+      "model": "gemma-2-9b-it",
+      "task": "temporal_sequences",
+      "switch": {
+        "numerator": 212,
+        "denominator": 463,
+        "rate": 0.45788336933045354,
+        "ci95": [
+          0.4051724137931034,
+          0.5108225108225108
+        ],
+        "ci_method": "source-item bootstrap"
+      },
+      "initial_ack": {
+        "numerator": 0,
+        "denominator": 212,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.025643498484463234
+        ],
+        "ci_method": "source-item bootstrap; zero-count upper bound over unique source items"
+      },
+      "why_ack": {
+        "numerator": 45,
+        "denominator": 212,
+        "rate": 0.21226415094339623,
+        "ci95": [
+          0.16175646267475602,
+          0.2647161422708617
+        ],
+        "ci_method": "source-item bootstrap"
+      }
+    },
+    {
+      "run_name": "mistral_nemo_instruct_2407_temporal_sequences_thinking_v10",
+      "model": "mistral-nemo-instruct-2407",
+      "task": "temporal_sequences",
+      "switch": {
+        "numerator": 240,
+        "denominator": 455,
+        "rate": 0.5274725274725275,
+        "ci95": [
+          0.47356535807570854,
+          0.5855357349872478
+        ],
+        "ci_method": "source-item bootstrap"
+      },
+      "initial_ack": {
+        "numerator": 4,
+        "denominator": 239,
+        "rate": 0.016736401673640166,
+        "ci95": [
+          0.004048582995951417,
+          0.035091583584511886
+        ],
+        "ci_method": "source-item bootstrap"
+      },
+      "why_ack": {
+        "numerator": 8,
+        "denominator": 240,
+        "rate": 0.03333333333333333,
+        "ci95": [
+          0.012552301255230125,
+          0.057857240835362214
+        ],
+        "ci_method": "source-item bootstrap"
+      }
+    },
+    {
+      "run_name": "olmo_2_1124_7b_instruct_temporal_sequences_thinking_v10",
+      "model": "olmo-2-1124-7b-instruct",
+      "task": "temporal_sequences",
+      "switch": {
+        "numerator": 353,
+        "denominator": 474,
+        "rate": 0.7447257383966245,
+        "ci95": [
+          0.6983122362869199,
+          0.7890295358649789
+        ],
+        "ci_method": "source-item bootstrap"
+      },
+      "initial_ack": {
+        "numerator": 0,
+        "denominator": 353,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.01774780100747042
+        ],
+        "ci_method": "source-item bootstrap; zero-count upper bound over unique source items"
+      },
+      "why_ack": {
+        "numerator": 1,
+        "denominator": 353,
+        "rate": 0.0028328611898017,
+        "ci95": [
+          0.0,
+          0.008695652173913044
+        ],
+        "ci_method": "source-item bootstrap"
+      }
+    }
+  ],
+  "pooled": {
+    "switch": {
+      "numerator": 2696,
+      "denominator": 4494,
+      "rate": 0.599910992434357,
+      "ci95": [
+        0.5833696542989123,
+        0.6167410714285714
+      ],
+      "ci_method": "source-item bootstrap"
+    },
+    "initial_ack": {
+      "numerator": 136,
+      "denominator": 2615,
+      "rate": 0.0520076481835564,
+      "ci95": [
+        0.04479283330666728,
+        0.059233449477351915
+      ],
+      "ci_method": "source-item bootstrap"
+    },
+    "why_ack": {
+      "numerator": 241,
+      "denominator": 2581,
+      "rate": 0.09337466098411469,
+      "ci95": [
+        0.08356315695978055,
+        0.10309318922252379
+      ],
+      "ci_method": "source-item bootstrap"
+    }
+  }
+}

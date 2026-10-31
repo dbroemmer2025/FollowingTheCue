@@ -1,0 +1,72 @@
+{
+ "cell": "qwen2_5_7b_temporal_sequences",
+ "model": "gpt-5.6-luna",
+ "text_source": "frozen capture prefix",
+ "layer": 27,
+ "transformer_in_candidate_grid": true,
+ "output_access_transformer_in_candidate_grid": false,
+ "targets": {
+  "RC": {
+   "n_rows": 392,
+   "n_items": 210,
+   "binary": false,
+   "baseline_loss": 4.639258429725938,
+   "families": {
+    "text_out_nollm": {
+     "loss": 2.5470091053100834,
+     "gain_over_baseline": 2.092249324415855,
+     "gain_ci95": [
+      1.5422605825461821,
+      2.683154583799986
+     ],
+     "chosen": [
+      "transformer_output_state0",
+      "transformer_output_state0",
+      "transformer_output_state0",
+      "transformer_output_state0",
+      "transformer_output_state0"
+     ],
+     "r2": 0.450987880090882
+    },
+    "joint_out_nollm": {
+     "loss": 1.9306635469721232,
+     "gain_over_baseline": 2.7085948827538155,
+     "gain_ci95": [
+      2.0258659913496975,
+      3.4093817137311064
+     ],
+     "chosen": [
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0"
+     ],
+     "r2": 0.5838422074956113
+    }
+   },
+   "state_beyond_text_and_output_nollm": {
+    "delta": 0.6163455583379605,
+    "ci95": [
+     0.23531640929755274,
+     0.9623473221823722
+    ],
+    "share_of_joint_gain": 0.22755176946628689,
+    "verdict": "state adds beyond text+output",
+    "scope": "post hoc no-LLM ablation (Amendment 2)"
+   }
+  }
+ },
+ "nollm_ablation": {
+  "amendment": "Amendment 2",
+  "reader_code_sha256": "d4f57a93dc9e6baaaedc4e1281c82ce97dcf5ace4eec42f2f5d975c463fefb03",
+  "extras": "heuristic + factual output (no LLM features)"
+ },
+ "output_access_control": {
+  "amendment": "Amendment 1",
+  "reader_code_sha256": "d4f57a93dc9e6baaaedc4e1281c82ce97dcf5ace4eec42f2f5d975c463fefb03",
+  "factual_score_file": "/content/drive/MyDrive/verbalization_ceiling/reports/direct_effect/qwen2_5_7b_temporal_sequences.jsonl",
+  "factual_score_sha256": "343312b3016bc9059becdea73917ba8a714466bd8329dda0275b19a97a3db581"
+ },
+ "oof_file": "/content/drive/MyDrive/verbalization_ceiling/reports/de_readers/results/qwen2_5_7b_temporal_sequences__nollm.oof.csv"
+}

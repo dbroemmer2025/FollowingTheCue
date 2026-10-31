@@ -1,0 +1,187 @@
+{
+ "cell": "qwen2_7b_it_temporal_sequences",
+ "model": "gpt-5.6-luna",
+ "text_source": "frozen capture prefix",
+ "layer": 27,
+ "transformer_in_candidate_grid": true,
+ "output_access_transformer_in_candidate_grid": true,
+ "targets": {
+  "dP": {
+   "n_rows": 471,
+   "n_items": 240,
+   "binary": false,
+   "baseline_loss": 0.028418424287677112,
+   "families": {
+    "state": {
+     "loss": 0.022027247751069602,
+     "gain_over_baseline": 0.006391176536607518,
+     "gain_ci95": [
+      0.0020030577938537192,
+      0.011352323433654544
+     ],
+     "chosen": [
+      "state-1_C1.0",
+      "state-1_C1.0",
+      "state-1_C1.0",
+      "state-1_C1.0",
+      "state-1_C1.0"
+     ],
+     "r2": 0.22489552805286506
+    },
+    "output": {
+     "loss": 0.024053510482582804,
+     "gain_over_baseline": 0.004364913805094317,
+     "gain_ci95": [
+      0.0011366198349533386,
+      0.007790916671091042
+     ],
+     "chosen": [
+      "feat_C0.1",
+      "feat_C0.1",
+      "feat_C0.1",
+      "feat_C1.0",
+      "feat_C0.1"
+     ],
+     "r2": 0.1535945047800218
+    },
+    "text_out": {
+     "loss": 0.02250868955592531,
+     "gain_over_baseline": 0.005909734731751806,
+     "gain_ci95": [
+      0.0017724524835770103,
+      0.010999803465174738
+     ],
+     "chosen": [
+      "feat_C0.1",
+      "transformer_output_state0",
+      "transformer_output_state0",
+      "ngram+feat_C0.1",
+      "transformer_output_state0"
+     ],
+     "r2": 0.207954342293158
+    },
+    "joint_out": {
+     "loss": 0.023530465482969252,
+     "gain_over_baseline": 0.004887958804707865,
+     "gain_ci95": [
+      0.0014713458377840244,
+      0.009336151301106004
+     ],
+     "chosen": [
+      "transformer_output_state",
+      "ngram+feat+state-1_C0.1_x1.0",
+      "transformer_output_state0",
+      "transformer_output_state",
+      "transformer_output_state"
+     ],
+     "r2": 0.17199964203600804
+    }
+   },
+   "state_beyond_text_and_output": {
+    "delta": -0.0010217759270439403,
+    "ci95": [
+     -0.0034979458290227213,
+     0.0011475140632881613
+    ],
+    "share_of_joint_gain": -0.20903939003328179,
+    "verdict": "not shown",
+    "scope": "post hoc output-access control (Amendment 1)"
+   }
+  },
+  "RC": {
+   "n_rows": 471,
+   "n_items": 240,
+   "binary": false,
+   "baseline_loss": 19.77855864852667,
+   "families": {
+    "state": {
+     "loss": 6.241306383553549,
+     "gain_over_baseline": 13.537252264973123,
+     "gain_ci95": [
+      11.73846966222514,
+      15.597253210014523
+     ],
+     "chosen": [
+      "state-1_C1.0",
+      "state-1_C1.0",
+      "state-1_C1.0",
+      "state-1_C1.0",
+      "state-1_C1.0"
+     ],
+     "r2": 0.6844407879024859
+    },
+    "output": {
+     "loss": 15.48729803330795,
+     "gain_over_baseline": 4.291260615218723,
+     "gain_ci95": [
+      2.7253246981598824,
+      5.838463951966909
+     ],
+     "chosen": [
+      "feat_C0.1",
+      "feat_C0.1",
+      "feat_C0.1",
+      "feat_C1.0",
+      "feat_C0.1"
+     ],
+     "r2": 0.21696528505824064
+    },
+    "text_out": {
+     "loss": 9.692747510484887,
+     "gain_over_baseline": 10.085811138041784,
+     "gain_ci95": [
+      8.000391151263411,
+      12.258133320940026
+     ],
+     "chosen": [
+      "ngram+feat_C10.0",
+      "ngram+feat_C1.0",
+      "ngram+feat_C10.0",
+      "ngram+feat_C1.0",
+      "ngram+feat_C1.0"
+     ],
+     "r2": 0.509936609500768
+    },
+    "joint_out": {
+     "loss": 6.219812717739753,
+     "gain_over_baseline": 13.558745930786918,
+     "gain_ci95": [
+      11.476184343465679,
+      15.762909829953019
+     ],
+     "chosen": [
+      "ngram+feat+state32_C1.0_x1.0",
+      "ngram+feat+state32_C1.0_x1.0",
+      "ngram+feat+state32_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state32_C1.0_x1.0"
+     ],
+     "r2": 0.6855275033803803
+    }
+   },
+   "state_beyond_text_and_output": {
+    "delta": 3.472934792745134,
+    "ci95": [
+     2.588498077519043,
+     4.377683615694048
+    ],
+    "share_of_joint_gain": 0.25613982373247207,
+    "verdict": "state adds beyond text+output",
+    "scope": "post hoc output-access control (Amendment 1)"
+   }
+  },
+  "decisive": {
+   "status": "skipped_occupancy",
+   "pos_items": 16,
+   "neg_items": 91,
+   "eligible": false
+  }
+ },
+ "output_access_control": {
+  "amendment": "Amendment 1",
+  "reader_code_sha256": "91eb4a811ac9093f07779de526e863595990194efeaa68f7c388d80da50f9038",
+  "factual_score_file": "/content/drive/MyDrive/verbalization_ceiling/reports/direct_effect/qwen2_7b_it_temporal_sequences.jsonl",
+  "factual_score_sha256": "48175399b2acd82c92595b91805bb0c0ef47a630084062c7812d1debec8e752c"
+ },
+ "oof_file": "/content/drive/MyDrive/verbalization_ceiling/reports/de_readers/results/qwen2_7b_it_temporal_sequences__output.oof.csv"
+}

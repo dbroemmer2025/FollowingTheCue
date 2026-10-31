@@ -1,0 +1,72 @@
+{
+ "cell": "olmo_2_1124_7b_instruct_temporal_sequences",
+ "model": "gpt-5.6-luna",
+ "text_source": "frozen capture prefix",
+ "layer": 31,
+ "transformer_in_candidate_grid": true,
+ "output_access_transformer_in_candidate_grid": false,
+ "targets": {
+  "RC": {
+   "n_rows": 472,
+   "n_items": 237,
+   "binary": false,
+   "baseline_loss": 22.12729835511729,
+   "families": {
+    "text_out_nollm": {
+     "loss": 17.785219305245594,
+     "gain_over_baseline": 4.342079049871698,
+     "gain_ci95": [
+      2.560476376588186,
+      6.052720215484714
+     ],
+     "chosen": [
+      "ngram+feat_C0.1",
+      "transformer_output_state0",
+      "transformer_output_state0",
+      "transformer_output_state0",
+      "ngram+feat_C0.1"
+     ],
+     "r2": 0.19623177579957574
+    },
+    "joint_out_nollm": {
+     "loss": 10.643898196857998,
+     "gain_over_baseline": 11.483400158259299,
+     "gain_ci95": [
+      8.89974877621869,
+      14.052288919183255
+     ],
+     "chosen": [
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0",
+      "ngram+feat+state-1_C1.0_x1.0"
+     ],
+     "r2": 0.5189698251437719
+    }
+   },
+   "state_beyond_text_and_output_nollm": {
+    "delta": 7.141321108387599,
+    "ci95": [
+     5.242075610336695,
+     9.212408313488408
+    ],
+    "share_of_joint_gain": 0.6218821089545759,
+    "verdict": "state adds beyond text+output",
+    "scope": "post hoc no-LLM ablation (Amendment 2)"
+   }
+  }
+ },
+ "nollm_ablation": {
+  "amendment": "Amendment 2",
+  "reader_code_sha256": "d4f57a93dc9e6baaaedc4e1281c82ce97dcf5ace4eec42f2f5d975c463fefb03",
+  "extras": "heuristic + factual output (no LLM features)"
+ },
+ "output_access_control": {
+  "amendment": "Amendment 1",
+  "reader_code_sha256": "d4f57a93dc9e6baaaedc4e1281c82ce97dcf5ace4eec42f2f5d975c463fefb03",
+  "factual_score_file": "/content/drive/MyDrive/verbalization_ceiling/reports/direct_effect/olmo_2_1124_7b_instruct_temporal_sequences.jsonl",
+  "factual_score_sha256": "e203dcb18e604fd95ac34965c5787bb8e7b09f07dac9dfd7f0ace3a3d9b52747"
+ },
+ "oof_file": "/content/drive/MyDrive/verbalization_ceiling/reports/de_readers/results/olmo_2_1124_7b_instruct_temporal_sequences__nollm.oof.csv"
+}
