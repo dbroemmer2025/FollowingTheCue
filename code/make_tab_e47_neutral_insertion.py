@@ -43,10 +43,11 @@ both pooled intervals resample source items within task while preserving
 repeated model and frame outcomes.}"""
 
 
-def matched_rows(run: Path, scoring: str = 'v2') -> list[dict]:
+def matched_rows(run: Path, scoring: str = 'v2',
+                 sidecar_name: str = 'neutral_insertion') -> list[dict]:
     """Matched rows; under v2 (default) cue-echo cued responses are invalid."""
     keys = echo_keys(run) if scoring == 'v2' else set()
-    with (run / 'neutral_insertion' / 'rows.csv').open(newline='') as stream:
+    with (run / sidecar_name / 'rows.csv').open(newline='') as stream:
         return [r for r in csv.DictReader(stream)
                 if r['cue_to_assigned'] and r['neutral_to_assigned']
                 and not neutral_row_is_echo(r, keys)]
@@ -115,6 +116,8 @@ def rates(rows: list[dict]) -> dict:
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--runs-root', type=Path, default=ROOT / 'e47')
+    parser.add_argument('--sidecar-name', default='neutral_insertion',
+                        help='neutral sidecar directory in each run')
     parser.add_argument('--out', type=Path,
                         default=ROOT / 'tables' / 'tab_e47_neutral_insertion.tex')
     parser.add_argument('--numbers', type=Path,
@@ -130,7 +133,7 @@ def main(argv=None) -> int:
     for model in TABLE_ORDER:
         for task in PAPER_TASKS:
             run = args.runs_root / f'{model}_{task}_thinking_v10'
-            rows = matched_rows(run, args.scoring)
+            rows = matched_rows(run, args.scoring, args.sidecar_name)
             r = rates(rows)
             lo, hi = item_ci(rows, args.draws, args.seed)
             away_lo, away_hi = wilson_ci(r['neutral_away'], r['n'])
@@ -177,7 +180,8 @@ def main(argv=None) -> int:
     tokens = sorted({int(r['neutral_prompt_tokens']) - int(r['cue_prompt_tokens'])
                      for r in all_rows})
     numbers = {
-        'post_hoc': True, 'descriptive': True, 'scoring': args.scoring, 'matched_n': n,
+        'post_hoc': True, 'descriptive': True, 'scoring': args.scoring,
+        'sidecar_name': args.sidecar_name, 'matched_n': n,
         'pooled': {**pooled, 'ci95': [plo, phi],
                    'neutral_away_ci95': [away_plo, away_phi],
                    'paired_counts': paired(all_rows)},
