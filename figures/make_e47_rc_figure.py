@@ -130,9 +130,9 @@ def plot(data: list[dict], output: Path, inputs: list[Path]) -> None:
             color="#B9C4CF", lw=1.4, zorder=1,
         )
     for key, label, marker in (
-        ("r2_text_out", "Text + output + Luna", "o"),
-        ("r2_state", "Residual state", "s"),
-        ("r2_joint_out", "Text + output + Luna + state", "D"),
+        ("r2_text_out", "TEXT", "o"),
+        ("r2_state", "STATE", "s"),
+        ("r2_joint_out", "TEXT+STATE", "D"),
     ):
         left.scatter(
             [row[key] for row in data], y, s=31, marker=marker,
@@ -162,9 +162,9 @@ def plot(data: list[dict], output: Path, inputs: list[Path]) -> None:
     max_ci_share = max(row["ci_share"][1] for row in data)
     right_limit = max(75.0, 5.0 * math.ceil((max_ci_share + 4.0) / 5.0))
     right.set_xlim(-8, right_limit)
-    right.set_xlabel("Residual increment (% of joint gain)")
+    right.set_xlabel(r"$\Delta_{\mathrm{out}}$ / joint gain (%)")
     right.grid(axis="x", color="#E1E5E9", lw=0.7)
-    right.set_title("B. Residual increment", loc="left", fontweight="bold")
+    right.set_title("B. Relative residual increment", loc="left", fontweight="bold")
     right.tick_params(axis="y", left=False, labelleft=False)
 
     first_temporal = next((i for i, row in enumerate(data)
