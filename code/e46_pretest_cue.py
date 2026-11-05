@@ -113,6 +113,14 @@ DEFAULT_BATCH = 40
 _MODEL_CACHE = {}
 
 
+def model_class_for_id(model_id):
+    from transformers import AutoModelForCausalLM
+    if model_id == 'mistralai/Magistral-Small-2509':
+        from transformers import Mistral3ForConditionalGeneration
+        return Mistral3ForConditionalGeneration
+    return AutoModelForCausalLM
+
+
 def load_model(model_id, dtype_name=None, device_map="auto", revision=None):
     """Same loading path as e0e / E1: registry dtype, device_map, remote code.
 
@@ -122,7 +130,6 @@ def load_model(model_id, dtype_name=None, device_map="auto", revision=None):
     if key in _MODEL_CACHE:
         return _MODEL_CACHE[key]
     import torch
-    from transformers import AutoModelForCausalLM
     from p2_common import load_tokenizer
     try:
         from models import resolve_torch_dtype
@@ -138,7 +145,7 @@ def load_model(model_id, dtype_name=None, device_map="auto", revision=None):
         kw["torch_dtype"] = dtype
     if device_map:
         kw["device_map"] = device_map
-    model = AutoModelForCausalLM.from_pretrained(model_id, **kw)
+    model = model_class_for_id(model_id).from_pretrained(model_id, **kw)
     if not device_map:
         model.to("cuda" if torch.cuda.is_available() else "cpu")
     model.eval()
